@@ -81,5 +81,6 @@ ultralytics==8.0.201
 urllib3==1.26.20
 validators==0.35.0
 zipp==3.23.0
-opencv-contrib-python
+opencv-python==4.11.0.86
+ultralytics
 

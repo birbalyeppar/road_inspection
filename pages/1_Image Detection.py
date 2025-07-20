@@ -56,12 +56,9 @@ score_threshold = st.slider("Confidence Threshold", min_value=0.0, max_value=1.0
 st.write("Lower the threshold if there is no damage detected, and increase the threshold if there is false prediction.")
 
 if image_file is not None:
-
     # Load the image
     image = Image.open(image_file)
-    
     col1, col2 = st.columns(2)
-
     # Perform inference
     _image = np.array(image)
     h_ori = _image.shape[0]
