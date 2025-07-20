@@ -10,7 +10,7 @@ import streamlit as st
 # Deep learning framework
 from ultralytics import YOLO
 
-from sample_utils.download import download_file
+# from sample_utils.download import download_file
 import streamlit as st
 
 st.set_page_config(page_title="Disabled", page_icon="🚫")
@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 MODEL_URL = "https://github.com/oracl4/RoadDamageDetection/raw/main/models/YOLOv8_Small_RDD.pt"  # noqa: E501
 MODEL_LOCAL_PATH = "YOLOv8_Small_RDD.pt"
-download_file(MODEL_URL, MODEL_LOCAL_PATH, expected_size=89569358)
+# download_file(MODEL_URL, MODEL_LOCAL_PATH, expected_size=89569358)
 
 # Session-specific caching
 # Load the model
