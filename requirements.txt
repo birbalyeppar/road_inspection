@@ -64,11 +64,12 @@ seaborn==0.13.2
 six==1.17.0
 smmap==5.0.2
 streamlit==1.28.0
-streamlit-webrtc==0.43.0
+streamlit-webrtc==0.43.4
 sympy==1.14.0
 tenacity==8.5.0
 thop==0.1.1.post2209072238
 toml==0.10.2
+-f https://download.pytorch.org/whl/cpu
 torch==2.0.0
 torchaudio==2.0.0
 torchvision==0.15.0
@@ -81,6 +82,4 @@ ultralytics==8.0.201
 urllib3==1.26.20
 validators==0.35.0
 zipp==3.23.0
-opencv-python==4.11.0.86
-ultralytics
 
