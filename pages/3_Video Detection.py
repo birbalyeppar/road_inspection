@@ -10,16 +10,6 @@ import streamlit as st
 # Deep learning framework
 from ultralytics import YOLO
 
-# from sample_utils.download import download_file
-import streamlit as st
-
-st.set_page_config(page_title="Disabled", page_icon="🚫")
-
-st.title("🚫 Section Disabled")
-st.info("This section is currently disabled by the admin.\nPlease check back later.")
-st.stop()
-
-
 st.set_page_config(
     page_title="Video Detection",
     page_icon="📷",
@@ -32,9 +22,7 @@ ROOT = HERE.parent
 
 logger = logging.getLogger(__name__)
 
-MODEL_URL = "https://github.com/oracl4/RoadDamageDetection/raw/main/models/YOLOv8_Small_RDD.pt"  # noqa: E501
 MODEL_LOCAL_PATH = "YOLOv8_Small_RDD.pt"
-# download_file(MODEL_URL, MODEL_LOCAL_PATH, expected_size=89569358)
 
 # Session-specific caching
 # Load the model
@@ -130,7 +118,9 @@ def processVideo(video_file, score_threshold):
                 _image = np.array(frame)
 
                 image_resized = cv2.resize(_image, (640, 640), interpolation = cv2.INTER_AREA)
-                results = net.predict(image_resized, conf=score_threshold)
+                # results = net.predict(image_resized, conf=score_threshold)
+                results = net.predict(_image, conf=score_threshold)
+
                 
                 # Save the results
                 for result in results:
