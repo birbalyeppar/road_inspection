@@ -47,7 +47,7 @@ cache_key = "yolov8smallrdd"
 if cache_key in st.session_state:
     net = st.session_state[cache_key]
 else:
-    net = YOLO(MODEL_LOCAL_PATH)
+    net = YOLO(MODEL_LOCAL_PATH, weights_only=False)
     st.session_state[cache_key] = net
 
 CLASSES = [
