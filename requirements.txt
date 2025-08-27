@@ -68,10 +68,6 @@ streamlit-webrtc==0.43.4
 sympy==1.14.0
 tenacity==8.5.0
 toml==0.10.2
--f https://download.pytorch.org/whl/cpu
-torch==2.2.1
-torchvision==0.15.1
-torchaudio==2.0.1
 thop
 tornado==6.5.1
 tqdm==4.67.1
